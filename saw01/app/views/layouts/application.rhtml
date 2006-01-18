@@ -1,0 +1,66 @@
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="keywords" content="Witze, Rezepte, Bilder, Shareaware, Datenaustausch, Freizeit, Spass">
+<meta name="description" content="Auf dieser Seite kann jeder Benutzer beliebige Daten (bevorzugt Texte und Bilder; möglich bis zur Größe von 1mb) online stellen.
+						Diese Daten können von jedem Benutzer (auch Gästen) eingesehen werden!">
+<meta name="author" content="Andreas Steiner">
+<body bgcolor="#B5CEEC" link="#000000" alink="#000000" vlink="#000000" text="#000000">
+<table width="98%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="200" align="left" valign="top">
+	<div id="sidebar"> <%= render "shared/navi" %> </div>
+    </td>
+    <td valign="top">
+      <table width="100% border="0" cellspacing="0" cellpadding="0">
+      <% if @flash["notice"] %>
+	<tr><td>
+	    <table border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+		<tr> 
+		  <td width="10" height="10"><%= show_image "ecke_lo.gif" %></td>
+		  <td><font size="-5">&nbsp;</font></td>
+		  <td width="10"><%= show_image "ecke_ro.gif" %></td>
+		</tr>
+		<tr> 
+		  <td width="10"></td>
+		  <td>
+			<span class="notice" style="font-weight:bold; color:red">
+				<%= @flash["notice"] %>
+			</span>
+		  </td>
+		  <td width="10"></td>
+		</tr>
+		<tr> 
+		  <td height="10" width="10"><%= show_image "ecke_lu.gif" %></td>
+		  <td><font size="-3">&nbsp;</font></td>
+		  <td width="10"><%= show_image "ecke_ru.gif" %></td>
+		</tr>
+	    </table>
+	</td></tr>
+	<tr><td>&nbsp;</td></tr>
+	<% end %>
+	<tr><td>
+	    <table width="100%" border="0" align="left" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+		<tr> 
+		  <td width="10" height="10"><%= show_image "ecke_lo.gif" %></td>
+		  <td><font size="-5">&nbsp;</font></td>
+		  <td width="10"><%= show_image "ecke_ro.gif" %></td>
+		</tr>
+		<tr> 
+		  <td width="10"></td>
+		  <td>
+			<h2 align="center"><%= @heading %></h2>
+			<%= @content_for_layout %>
+		  </td>
+		  <td width="10"></td>
+		</tr>
+		<tr> 
+		  <td height="10" width="10"><%= show_image "ecke_lu.gif" %></td>
+		  <td><font size="-3">&nbsp;</font></td>
+		  <td width="10"><%= show_image "ecke_ru.gif" %></td>
+		</tr>
+	    </table>
+	</td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>

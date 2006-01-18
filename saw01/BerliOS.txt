@@ -1,0 +1,44 @@
+Your project registration for BerliOS Developer has been approved.
+
+Project Full Name:  	shareawarepro
+Project Unix Name:  	shareawarepro
+CVS Server:        	cvs.berlios.de
+SVN Server:        	svn.berlios.de
+Shell Server:       	shell.berlios.de
+Web Server:		shareawarepro.berlios.de
+Web Site:			https://developer.berlios.de/
+
+Your DNS will take up to a day to become active on our site. Your shell
+accounts will become active at the next 6-hour cron update. While
+waiting for your DNS to resolve, you may try shelling into
+shell.berlios.de and pointing CVS to cvs.berlios.de or
+SVN to svn.berlios.de.
+
+If after six hours your shell accounts still do not work, please
+open a support ticket so that we may take a look at the problem.
+Please note that all shell accounts are closed to telnet and only
+work with SSH2.
+
+Your web site is accessible through your shell account. Directory
+information will be displayed immediately after logging in.
+
+Please take some time to read the site documentation about project
+administration. If you visit your own project page in BerliOS Developer
+while logged in, you will find additional menu functions to your
+left labeled "Project Administrator".
+
+We highly suggest that you now visit and create a public
+description for your project. This can be done by visiting your project
+page while logged in, and selecting 'Project Admin' from the menus
+on the left.
+
+Your project will also not appear in the Trove software map until
+you categorize it in the project administration screens. So that
+people can find your project, you should do this now. Visit your project
+while logged in, and select 'Project Admin' from the menus on the
+left.
+
+Enjoy the system, and please tell others about BerliOS Developer. Let us know
+if there is anything we can do to help you.
+
+ -- the BerliOS Developer crew

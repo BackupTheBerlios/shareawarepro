@@ -1,0 +1,10 @@
+<%= error_messages_for 'forumthemes' %>
+
+<!--[form:forumthemes]-->
+<p><label for="forumthemes_name">Name</label><br/>
+<%= text_field 'forumthemes', 'name'  %></p>
+
+<%= hidden_field 'forumthemes', 'anz_eintraege', "value" => '0'  %></p>
+<%= hidden_field 'forumthemes', 'forumfolder_id', "value" => @folder_id  %>
+<!--[eoform:forumthemes]-->
+

@@ -1,0 +1,6 @@
+<% if(!@theme.nil?) %>
+	<% @heading = @theme.name %>
+<% end %>
+
+<%= link_to 'Edit', :action => 'edit', :id => @theme %> |
+<%= link_to 'Back', :controller => 'forumfolders', :action => 'show', :id => @theme.forumfolder.id %>

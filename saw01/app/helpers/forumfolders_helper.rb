@@ -1,0 +1,2 @@
+module ForumfoldersHelper
+end

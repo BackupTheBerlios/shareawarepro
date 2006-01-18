@@ -1,0 +1,20 @@
+<!-- Userpage: -->
+<% @heading = "Userpage von "+@user.login %>
+
+<% if !@user.vorname.nil? %> <b><%= @user.vorname %></b> <% end %>
+<% if !@user.nachname.nil? %> <b><%= @user.nachname %></b> <% end %>
+<table width='40%'>
+    <tr><td align="right" width="35%">zuletzt online: &nbsp; </td><td><%= @user.lastonline.strftime("%d.%m.%Y &nbsp; %I:%M %p ") %></td></tr>
+<% if !@user.email.nil? %>
+	<tr><td align="right" width="35%">E-Mail: &nbsp; </td><td><%= @user.email %></td></tr>
+<% end %>
+<% if !@user.email.nil? %>
+	<tr><td align="right" width="35%">Geburtsdatum: &nbsp; </td><td><%= @user.birthdate.strftime("%d.%m.%Y") %></td></tr>
+<% end %>
+<% if !@user.beschreibung.nil? %>
+	<tr><td align="right" valign="top" width="35%">&Uuml;ber mich: &nbsp; </td><td><%= @user.beschreibung %></td></tr>
+<% end %>
+</table>
+
+<br><br>
+<% if @session[:user].id = @user.id %> <a href="/users/edit/<%= @user.id %>">Einstellungen</a> <% end %>

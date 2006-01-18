@@ -1,0 +1,21 @@
+<h2>Einstellungen f&uuml;r <%= @user.login %></h2>
+
+<%= start_form_tag :action => 'update', :id => @user.id %>
+<table border=0 align="left">
+  <tr>
+	<td align="right" valign="top">Username:</td>
+	<td><input type="text" name="login" value="<%= @user.login %>"></td>
+  </tr>
+  <tr>
+	<td align="right" valign="top">Vorname:</td>
+	<td><input type="text" name="vornamen" value="<%= @user.vorname %>"></td>
+  </tr>
+  <tr>
+	<td align="right" valign="top">Nachname:</td>
+	<td><input type="text" name="nachname" value="<%= @user.nachname %>"></td>
+  </tr>
+  <tr>
+	<td colspan=2><input type="submit" value="&uuml;bernehmen" /></td>
+  </tr>
+</table>
+<%= end_form_tag %>

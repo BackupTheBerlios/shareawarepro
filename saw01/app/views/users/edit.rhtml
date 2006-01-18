@@ -1,0 +1,56 @@
+<% @heading = "Einstellungen f&uuml;r "+@user.login %>
+
+<%= start_form_tag :action => 'update', :id => @user.id %>
+<%= error_messages_for 'user' %>
+
+<table border=0 align="left">
+  <tr>
+	<td colspan=2 align="left" valign="top">Userdaten:</td>
+  </tr>
+  <tr>
+	<td align="right" valign="top">Username:</td>
+	<td><%= text_field( 'user', 'login' ) %></p></td>
+  </tr>
+  <tr>
+	<td align="right" valign="top">Vorname:</td>
+	<td><%= text_field( 'user', 'vorname' ) %></td>
+  </tr>
+  <tr>
+	<td align="right" valign="top">Nachname:</td>
+	<td><%= text_field( 'user', 'nachname' ) %></td>
+  </tr>
+  <tr>
+	<td align="right" valign="top">E-Mail:</td>
+	<td><%= text_field( 'user', 'email' ) %></td>
+  </tr>
+  <tr>
+	<td align="right" valign="top">Beschreibung:</td>
+	<td><%= text_area( 'user', 'beschreibung', :rows=>5 ) %></td>
+  </tr>
+  <tr>
+	<td colspan=2>&nbsp;</td>
+  </tr>
+  <tr>
+	<td colspan=2 align="left" valign="top">Passwort:</td>
+  </tr>
+  <tr>
+	<td align="right" valign="top">neues Passwort:</td>
+	<td><input type="text" id="pw1" name="pw1" size="30"></td>
+  </tr>
+  <tr>
+	<td align="right" valign="top">Passwortwiederholung:</td>
+	<td><input type="text" id="pw2" name="pw2" size="30"></td>
+  </tr>
+  <tr>
+	<td align="right" valign="top">altes Passwort:</td>
+	<td><input type="text" id="pwa" name="pwa" size="30"></td>
+  </tr>
+  <tr>
+	<td colspan=2>&nbsp;</td>
+  </tr>
+  <tr>
+	<td colspan=2 align="center"><input type="submit" value="&uuml;bernehmen" /></td>
+  </tr>
+</table>
+
+<%= end_form_tag %>

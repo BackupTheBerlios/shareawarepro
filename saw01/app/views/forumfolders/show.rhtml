@@ -1,0 +1,40 @@
+<% @heading = @folder.name %>
+
+<table>
+  <tr>
+	<% if(!@ueberfolder.nil?) %>
+		<th><%= link_to '<div style="color: red; text-decoration: none;">/\</div>', { :action => 'show', :id => @ueberfolder.id } %></th>
+		<th align="left">Ordner:</th>
+	<% else %>
+		<th align="left" colspan="2">Ordner:</th>
+	<% end %>
+  </tr>
+  
+<% for forumfolder in @forumfolders %>
+    <tr>
+	<td><%= link_to '<div style="color: red; text-decoration: none;">x</div>', { :action => 'destroy', :id => forumfolder }, :confirm => 'Are you sure?' %></td>
+	<td><%= link_to forumfolder.name, { :action => 'show', :id => forumfolder } %> (<%= forumfolder.anz_themen %>)</td>
+    </tr>
+<% end %>
+</table>
+
+<%= link_to 'Previous page', { :page => @forumfolder_pages.current.previous } if @forumfolder_pages.current.previous %>
+<%= link_to 'Next page', { :page => @forumfolder_pages.current.next } if @forumfolder_pages.current.next %> 
+
+<% if(!@forumthemes.empty?) %>
+<br />
+<table>
+  <tr><th align="left" colspan="2">Themen:</th></tr>
+<% for forumtheme in @forumthemes %>
+    <tr>
+	<td><%= link_to '<div style="color: red; text-decoration: none;">x</div>', {:controller => 'forumthemes', :action => 'destroy', :id => forumtheme }, :confirm => 'Are you sure?' %></td>
+	<td><%= link_to forumtheme.name, {:controller => 'forumthemes', :action => 'show', :id => forumtheme } %> (<%= forumtheme.anz_eintraege %>)</td>
+    </tr>
+<% end %>
+</table>
+<% end %>
+
+<br />
+
+<%= link_to 'neuer Ordner', :action => 'new' %>
+<%= link_to 'neues Thema', :controller => 'forumthemes', :action => 'new', :folder_id => @folder.id %>

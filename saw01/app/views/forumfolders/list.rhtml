@@ -1,0 +1,28 @@
+<% if(@ueberfolder.nil?) %>
+<h1>Listing forumfolders</h1>
+<% else %>
+<h1>Unterordner von <%= @ueberfolder.name %></h1>
+<% end %>
+
+<table>
+  <tr>
+  <% for column in Forumfolder.content_columns %>
+    <th><%= column.human_name %></th>
+  <% end %>
+  </tr>
+  
+<% for forumfolder in @forumfolders %>
+    <tr>
+      <td><%= link_to forumfolder.name, { :action => 'show', :id => forumfolder } %></td>
+      <td><%= forumfolder.anz_themen %></td>
+      <td><%= link_to 'Destroy', { :action => 'destroy', :id => forumfolder }, :confirm => 'Are you sure?' %></td>
+    </tr>
+<% end %>
+</table>
+
+<%= link_to 'Previous page', { :page => @forumfolder_pages.current.previous } if @forumfolder_pages.current.previous %>
+<%= link_to 'Next page', { :page => @forumfolder_pages.current.next } if @forumfolder_pages.current.next %> 
+
+<br />
+
+<%= link_to 'New forumfolder', :action => 'new' %>

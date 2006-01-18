@@ -1,0 +1,31 @@
+<table width="200" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+	<td background="/images/mezzogold_top.gif">&nbsp;</td>
+    </tr>
+    <% akt_img_nr = 0 %>
+    <% if @session[:user].nil? %>
+    <tr>
+	<td background="/images/mezzogold_b<%= akt_img_nr+=1 %>.gif"> &nbsp; &nbsp; &nbsp;<a href="/login/login">Login</a></td>
+    </tr>
+    <% else %>
+    <tr>
+	<td background="/images/mezzogold_b<%= akt_img_nr+=1 %>.gif"> &nbsp; &nbsp; &nbsp;<a href="/login/logout">Logout</a></td>
+    </tr>
+    <% end %>
+    <% if (akt_img_nr >= 8) %> <% akt_img_nr = 0 %> <% end %>
+    <% if !@session[:user].nil? %>
+    <tr>
+	<td background="/images/mezzogold_b<%= akt_img_nr+=1 %>.gif">
+		&nbsp; &nbsp; &nbsp;<a href="/users/show/<%= @session[:user].id %>">Userpage</a>
+	</td>
+    </tr>
+    <% end %>
+    <tr>
+	<td background="/images/mezzogold_b<%= akt_img_nr+=1 %>.gif">
+		&nbsp; &nbsp; &nbsp;<a href="/forumfolders/show/2">Forum</a>
+	</td>
+    </tr>
+    <tr>
+	<td background="/images/mezzogold_bottom.gif">&nbsp;</td>
+    </tr>
+</table>
